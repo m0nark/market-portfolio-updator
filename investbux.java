@@ -1,21 +1,4 @@
-// Add these dependencies to your existing pom.xml:
-/*
-<dependency>
-    <groupId>org.jsoup</groupId>
-    <artifactId>jsoup</artifactId>
-    <version>1.17.2</version>
-</dependency>
-<dependency>
-    <groupId>com.google.apis</groupId>
-    <artifactId>google-api-services-sheets</artifactId>
-    <version>v4-rev20231130-2.0.0</version>
-</dependency>
-<dependency>
-    <groupId>com.google.auth</groupId>
-    <artifactId>google-auth-library-oauth2-http</artifactId>
-    <version>1.20.0</version>
-</dependency>
-*/
+
 
 package com.yourpackage;
 
