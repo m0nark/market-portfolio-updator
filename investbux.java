@@ -124,8 +124,6 @@ public class InvestBuxFetcher {
     
     public void updateGoogleSheet(int balance, String cell) {
         try {
-            // You'll need to store your Google service account credentials JSON 
-            // in application.properties as a string or file path
             String credentialsJson = "YOUR_GOOGLE_CREDENTIALS_JSON"; // Replace with actual implementation
             
             ServiceAccountCredentials credentials = ServiceAccountCredentials
@@ -164,7 +162,6 @@ public class InvestBuxFetcher {
         logger.info("Parsing fetched data.");
         
         try {
-            // Fetch the 'Total Portfolio Value'
             Element portfolioDiv = document.selectFirst("div[onclick*=fnTotalPortfolioValue]");
             if (portfolioDiv == null) {
                 throw new RuntimeException("Portfolio div not found");
@@ -178,7 +175,6 @@ public class InvestBuxFetcher {
             String portfolioText = portfolioSpan.text().trim().replace(",", "");
             int portfolioValue = (int) Double.parseDouble(portfolioText) + 5000;
             
-            // Fetch the 'MF Current Cost'
             Element mfCostHeader = document.selectFirst("h6:contains(MF Current Cost)");
             if (mfCostHeader == null) {
                 throw new RuntimeException("MF Current Cost header not found");
@@ -227,7 +223,6 @@ public class InvestBuxFetcher {
     }
 }
 
-// Controller class - Add this to your existing controllers package
 package com.yourpackage;
 
 import org.springframework.beans.factory.annotation.Autowired;
